@@ -23,7 +23,7 @@ with right_column:
 
     # Display the uploaded image
     if uploaded_image is not None:
-        st.image(uploaded_image, caption="Uploaded image", use_column_width=True)
+        st.image(uploaded_image, caption="Uploaded image", use_container_width=True)
 
 with left_column:
     adults = st.text_input("Number of Adults")
