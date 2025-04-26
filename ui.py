@@ -18,6 +18,13 @@ with right_column:
     if custom != "":
         chosen = custom
 
+    # Add an image upload widget
+    uploaded_image = st.file_uploader("Upload an image of your fridge contents", type=["jpg", "png", "jpeg"])
+
+    # Display the uploaded image
+    if uploaded_image is not None:
+        st.image(uploaded_image, caption="Uploaded image", use_column_width=True)
+
 with left_column:
     adults = st.text_input("Number of Adults")
     children = st.text_input("Number of Children", value="0")
